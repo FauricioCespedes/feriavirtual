@@ -1,5 +1,6 @@
 <?php
     class RegistroMetodos{
+
         function BuscarTodos(){
             $todosRegistro=array();
             $conexion = new Conexion();
@@ -11,7 +12,7 @@
                         $r = new Registro();
                         $r->setId($fila["ID"]);
                         $r->setNombre($fila["NOMBRE"]);
-                        $r->setApellido($fila["APELLIDO1"]);
+                        $r->setApellido($fila["APELLIDO"]);
                         $r->setCorreo($fila["CORREO"]);
                         $r->setCedula($fila["CEDULA"]);
                         $r->setEstado($fila["ESTADO"]);
@@ -29,8 +30,8 @@
                 $est = false;
                 $conexion = new Conexion();
     
-                $sql = "INSERT INTO `REGISTRO`(`NOMBRE`,`APELLIDO`,`CORREO`, `CEDULA`,`ESTADO`)
-                VALES('".$registro->getNombre()."',
+                $sql = "INSERT INTO `registro`(`NOMBRE`,`APELLIDO`,`CORREO`, `CEDULA`,`ESTADO`)
+                VALuES('".$registro->getNombre()."',
                       '".$registro->getApellido()."',
                       '".$registro->getCorreo()."',
                       '".$registro->getCedula()."',
@@ -87,9 +88,9 @@
                     }
                 }
                 else{
-                    $clientes=null;
+                    $registro=null;
                 }
                 $conexion->Cerrar();
-                return $clientes;
+                return $registro;
             }
     }

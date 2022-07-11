@@ -5,10 +5,12 @@
 
     class RegistroControlador {
 
-        public function BuscarTodos(){
+        public function VistaRegistro(){
             $registroMetodos= new RegistroMetodos();
             $todosRegistro=$registroMetodos->BuscarTodos();
+
             require_once "./Vista/VistaRegistro.php";
+             //index.php?controlador=Registro&accion=VistaRegistro
         }
         public function CrearRegistro(){
             $registro = new Registro();
@@ -23,6 +25,7 @@
             $registro->setCedula($cedula);
             $registro->setApellido($apellido);
             $registro->setCorreo($correo);
+            $registro->setEstado(1);
 
             if($registroMetodos->NuevoRegistro($registro))
                 header("Location: index.php?controlador=Index&accion=Main");
@@ -34,11 +37,13 @@
             $registro = new Registro();
             $registroMetodos = new RegistroMetodos();
 
-            $id = $_REQUEST['id'];
+            $id = $_POST['id'];
             $nombre = $_POST['nombre'];
             $cedula = $_POST['cedula'];
             $apellido = $_POST['apellido'];
             $correo = $_POST['correo'];
+            $estado = $_POST['estado'];
+
     
     
             $registro->setId($id);
@@ -46,11 +51,12 @@
             $registro->setNombre($nombre);
             $registro->setApellido($apellido);
             $registro->setCorreo($correo);
+            $registro->setEstado($estado);
     
             if($registroMetodos->ModificarRegistro($registro))
-                header("Location: ");
+                header("Location: index.php?controlador=Registro&accion=VistaRegistro");
             else
-                header("Location: ");
+                header("Location: ./Vista/ActualizarRegistro.php");
         //index.php?controlador=Registro&accion=ModificarRegistro
         }
         
@@ -62,9 +68,9 @@
             {
                 $id=$_REQUEST['id'];
                 $registro=$registroMetodos->BuscarRegistro($id);
-                require_once "";
+                require_once "./Vista/ActualizarRegistro.php";
             }else {
-                header("Location: ");
+                header("Location: index.php?controlador=Registro&accion=VistaRegistro");
             }
         //index.php?controlador=Registro&accion=ModificarRegistro2
         }

@@ -12,35 +12,47 @@
     <div class="container pt-5">
         <div class="card">
           <div class="card-body">
-            <form method="post" action="index.php?controlador=Registro&accion=CrearRegistro">
+            <form method="post" action="index.php?controlador=Registro&accion=ModificarRegistro">
               <div class="cbody">
-                <div class="mx-auto" style="width: 250px;">
-                <img src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid pt-4">
-                  <h1 class="pt-3 txtregistro">Feria Virtual</h1>
+                <div class="mx-auto" style="width: 200px;">
+                  <h1 class="pt-3 txtregistro"> Modificar</h1>
                 </div>
-                <p class="text-center pt-3 pb-4">Registrate para recibir mas informacion de la Feria Virtual</p>
                 <div class="input-group">
-                  <input type="text" name="iptNombre" class="input" required>
+                    <input type="hidden" name="id" value="<?php echo $registro->getId()?>">
+                  <input type="text" name="nombre" class="input" value="<?php echo $registro->getNombre()?>" required>
                   <label for="name" class="input-label">Nombre</label>
                 </div>
                 <br>
                 <div class="input-group">
-                  <input type="text" name="iptApellido" class="input" required>
+                  <input type="text" name="apellido" value="<?php echo $registro->getApellido()?>" class="input" required>
                   <label for="name" class="input-label">Apellido </label>
                 </div>
                 <br>
                 <div class="input-group">
-                  <input type="email" name="iptCorreo" class="input" required>
+                  <input type="email" name="correo" value="<?php echo $registro->getCorreo()?>" class="input" required>
                   <label for="name" class="input-label">Correo </label>
                 </div>
                 <br>
                 <div class="input-group">
-                  <input type="text" name="iptCedula" class="input" required>
+                  <input type="text" name="cedula" value="<?php echo $registro->getCedula()?>" class="input" required>
                   <label for="name" class="input-label">Cedula </label>
                 </div>
                 <br>
+                <div class="input-group">
+                    <select class="form-select" name="estado" aria-label="Default select example">
+                    <option selected disabled><?php 
+                                if($registro->getEstado() == 1 ){
+                                    echo "Activo";
+                                }else{
+                                    echo "Inactivo";
+                                }?></option>
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo  </option>
+                    </select>
+                </div>
+                <br>
                 <div class="mx-auto" style="width: 200px;">
-                <button type="submit" class="btn btn-primary registro">Registrarme</button>
+                <button type="submit" class="btn btn-primary registro">Modificar</button>
                 </div>
               </div>
             </form>

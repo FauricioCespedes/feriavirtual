@@ -65,8 +65,12 @@
                                ?></td>
                                 <td>
                                 <a href="index.php?controlador=Registro&accion=ModificarRegistro2&id=<?php echo $t->getId()?>">
-                                    <i class="fa-solid fa-pen-to-square" style="font-size: 1.3rem;"></i></td>
-                                </a>    
+                                    <i class="fa-solid fa-pen-to-square" style="font-size: 1.3rem;"></i>
+                                </a>  
+                                <a href="index.php?controlador=Registro&accion=EliminarRegistro&id=<?php echo $t->getId()?>">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>  
+                                </td>
                             </tr>
                         <?php
                     }

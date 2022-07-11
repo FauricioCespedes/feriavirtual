@@ -66,14 +66,34 @@
            
             if(isset($_REQUEST['id']))
             {
-                $id=$_REQUEST['id'];
+                $id=$_REQUEST['id'];    
                 $registro=$registroMetodos->BuscarRegistro($id);
+                //$registro->setEstado(0);
                 require_once "./Vista/ActualizarRegistro.php";
             }else {
                 header("Location: index.php?controlador=Registro&accion=VistaRegistro");
             }
         //index.php?controlador=Registro&accion=ModificarRegistro2
         }
+
+        public function EliminarRegistro(){
+            $registro = new Registro();
+            $registroMetodos = new RegistroMetodos();
+           
+            if(isset($_REQUEST['id']))
+            {
+                $id=$_REQUEST['id'];
+                $registro=$registroMetodos->BuscarRegistro($id);
+                $registro->setEstado(0);
+
+                if($registroMetodos->ModificarRegistro($registro))
+                header("Location: index.php?controlador=Registro&accion=VistaRegistro");
+            }else {
+                header("Location: index.php?controlador=Registro&accion=VistaRegistro");
+            }
+        //index.php?controlador=Registro&accion=EliminarRegistro
+        }
+
 
 
 

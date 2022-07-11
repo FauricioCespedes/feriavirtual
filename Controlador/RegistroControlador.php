@@ -5,6 +5,11 @@
 
     class RegistroControlador {
 
+        public function BuscarTodos(){
+            $registroMetodos= new RegistroMetodos();
+            $todosRegistro=$registroMetodos->BuscarTodos();
+            require_once "./Vista/VistaRegistro.php";
+        }
         public function CrearRegistro(){
             $registro = new Registro();
             $registroMetodos = new RegistroMetodos();
@@ -20,9 +25,9 @@
             $registro->setCorreo($correo);
 
             if($registroMetodos->NuevoRegistro($registro))
-                header("Location: ");
+                header("Location: index.php?controlador=Index&accion=Main");
             else
-                header("Location: ");
+                header("Location: index.php?controlador=Index&accion=Registro");
         //index.php?controlador=Registro&accion=CrearRegistro
         }
         public function ModificarRegistro(){
@@ -46,6 +51,7 @@
                 header("Location: ");
             else
                 header("Location: ");
+        //index.php?controlador=Registro&accion=ModificarRegistro
         }
         
         public function ModificarRegistro2(){
@@ -60,7 +66,7 @@
             }else {
                 header("Location: ");
             }
-            
+        //index.php?controlador=Registro&accion=ModificarRegistro2
         }
 
 

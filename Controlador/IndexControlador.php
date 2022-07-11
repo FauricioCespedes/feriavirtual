@@ -1,0 +1,14 @@
+<?php
+    class IndexControlador {
+        
+        public function Main(){
+            require_once "./Vista/Main.php";
+        //index.php?controlador=Index&accion=Main
+
+        }
+        public function Registro(){
+            require_once "./Vista/Registro.php";
+        //index.php?controlador=Index&accion=Registro
+
+        }
+    }

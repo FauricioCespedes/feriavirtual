@@ -21,7 +21,9 @@
 			</ul>
 	  
 			<div class="col-md-3 text-end">
-			  <button type="button" class="btn btn-outline-primary me-2">Login</button>
+				<a href="index.php?controlador=Index&accion=Registro">
+					<button type="button" class="btn btn-outline-primary me-2">Registro</button>
+				</a>
 			</div>
 		</header>	
 

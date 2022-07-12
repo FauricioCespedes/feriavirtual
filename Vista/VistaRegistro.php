@@ -21,8 +21,8 @@
         </ul>
     
         <div class="col-md-3 text-end">
-            <a href="index.php?controlador=Index&accion=Registro">
-                <button type="button" class="btn btn-outline-primary me-2">Registro</button>
+            <a href="./Salir.php">
+                <button type="button" class="btn btn-outline-primary me-2">Cerrar Sesion</button>
             </a>
         </div>
     </header>	

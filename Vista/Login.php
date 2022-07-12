@@ -12,31 +12,20 @@
     <div class="container pt-5">
         <div class="card">
           <div class="card-body">
-            <form method="post" action="index.php?controlador=Registro&accion=CrearRegistro">
+            <form method="post" action="index.php?controlador=Admin&accion=Login">
               <div class="cbody">
                 <div class="mx-auto" style="width: 250px;">
                 <img src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid pt-4">
-                  <h1 class="pt-3 txtregistro">Feria Virtual</h1>
+                  <h1 class="pt-3 pb-2 txtregistro">Inicia Sesion</h1>
                 </div>
-                <p class="text-center pt-3 pb-4">Registrate para recibir mas informacion de la Feria Virtual</p>
                 <div class="input-group">
-                  <input type="text" name="iptNombre" class="input" required>
-                  <label for="name" class="input-label">Nombre</label>
-                </div>
-                <br>
-                <div class="input-group">
-                  <input type="text" name="iptApellido" class="input" required>
-                  <label for="name" class="input-label">Apellido </label>
+                  <input type="email" name="correo" class="input" required>
+                  <label for="name" class="input-label">Correo</label>
                 </div>
                 <br>
                 <div class="input-group">
-                  <input type="email" name="iptCorreo" class="input" required>
-                  <label for="name" class="input-label">Correo </label>
-                </div>
-                <br>
-                <div class="input-group">
-                  <input type="text" name="iptCedula" class="input" required>
-                  <label for="name" class="input-label">Cedula </label>
+                  <input type="password" name="contrasena" class="input" required>
+                  <label for="name" class="input-label">Contraseña </label>
                 </div>
                 <br>
                 <div class="mx-auto" style="width: 200px;">

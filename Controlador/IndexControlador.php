@@ -10,4 +10,8 @@
             require_once "./Vista/Registro.php";
         //index.php?controlador=Index&accion=Registro
         }
+        public function Login(){
+            require_once "./Vista/Login.php";
+        //index.php?controlador=Index&accion=Login
+        }
     }

@@ -53,3 +53,81 @@
     padding: 0 1.625rem;
     
 }
+
+
+/* Mapa */
+.map-container{
+		position: relative;
+		margin: auto;
+		inset: 0;
+		width: 35rem;
+		margin-bottom: 1em;
+}
+.map-container__image{
+		width: 100%;
+		display: block;
+		border-radius: .5em;	
+}
+
+.point{
+		display: block;
+		width: 35px;
+		height: 35px;
+		background-color: #fcfcfc;
+		border: 3px inset #a1a1a1;
+		position: absolute;
+		border-radius: 50%;
+		cursor: pointer;
+}
+
+.point-info{
+		left: 29%;
+		top: 25%;
+}
+.point-accounting{
+		left: 13.5%;
+		top: 14%;
+}
+.point-conta{
+		left: 11.7%;
+		top: 23%;
+}
+.point-presicion{
+		left: 78%;
+		top: 53%;
+}
+.point-mantenimiento{
+		left: 76%;
+		top: 62%;
+}
+.point-electro{
+		left: 74%;
+		top: 71%;
+}
+.point-diseno{
+		left: 61.5%;
+		top: 87%;
+}
+.point-automotriz{
+		left: 79%;
+		top: 30%;
+}
+.point-secretariado{
+		left: 29%;
+		top: 39.5%;
+}
+
+/*Poppers*/
+.tippy-box[data-animation='open'][data-state='hidden'] {
+  opacity: 0;
+	transform: scale(0.7);
+}
+
+.tippy-box[data-theme~='popover-style'] {
+  color: #444;
+	background-color: #fff;
+	width: 238px;
+	padding: .5em;
+	box-shadow: 0 0 3px hsla(0, 0%, 0%, .2);
+	pointer-events: all;
+}

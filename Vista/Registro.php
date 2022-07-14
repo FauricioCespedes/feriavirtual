@@ -39,8 +39,11 @@
                   <label for="name" class="input-label">Cedula </label>
                 </div>
                 <br>
-                <div class="mx-auto" style="width: 200px;">
-                <button type="submit" class="btn btn-primary registro">Registrarme</button>
+                <div class="d-flex justify-content-center">
+                  <a class="pe-2" href="index.php?controlador=Index&accion=Main">
+                    <button type="button" class="btn btn-primary registro">Volver</button>
+                  </a>
+                  <button type="submit" class="btn btn-primary registro" >Registrarme</button>
                 </div>
               </div>
             </form>

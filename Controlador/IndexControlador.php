@@ -14,4 +14,8 @@
             require_once "./Vista/Login.php";
         //index.php?controlador=Index&accion=Login
         }
+        public function Salir(){
+            require_once "./Vista/Login.php";
+        //index.php?controlador=Index&accion=Login
+        }
     }

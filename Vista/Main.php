@@ -30,15 +30,16 @@
   	<body class="mh-100-vh">
 				<header class="px-5 d-flex flex-wrap align-items-center justify-content-between general-shadow">
 					<img width="110" height="50" src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid" >
-					<a href="index.php?controlador=Index&accion=Registro">
-						<button type="button" class="btn btn-outline-primary me-2">Registrarme</button>
-					</a>
+					
 				</header>	
 				<main class="main-container py-4">
 						<div class="texto-container px-4" style="font-size: 1.2rem;">
 							<h2 class="txtregistro fs-3 mt-2 mb-3">Bienvenido a la Feria Virtual COVAO 2022</h2>
 							<p>Aquí podrá conocer más sobre todas las especialidades impartidas, ubicadas en el mapa del colegio según su ubicación real mediante los puntos blancos.</p>
 							<p>En caso de que quiera recibir más información puede registrar su correo electrónico en la parte superior derecha de la página.</p>	
+							<a href="index.php?controlador=Index&accion=Registro">
+								<button type="button" class="btn btn-outline-primary me-2">Registrarme</button>
+							</a>
 						</div>
 						<div class="map-container">
 								<img class="map-container__image" src="./Vista/assets/images/mapa.png" alt="Mapa COVAO">

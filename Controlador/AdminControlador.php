@@ -3,11 +3,11 @@
     require_once "./Modelo/Conexion.php";
     require_once "./Modelo/Metodos/AdminMetodos.php";
     require_once "./Modelo/Entidades/Admin.php";
+    session_start();
 
     class AdminControlador {
 
          function Login(){
-
             $admin = new Admin();
             $adminMetodos = new AdminMetodos();
 
@@ -18,24 +18,16 @@
 
             if($admin != null){
                 if($admin->getContrasena() == $contrasena && $admin->getCorreo() == $correo){
-                    if($admin->getEstado()==1){
-                        session_start();
-                        $_SESSION['acceso'] = 1;
-                        header("Location: index.php?controlador=Registro&accion=VistaRegistro");
-                    }else if($admin->getEstado()==2){
-                        session_start();
-                        $_SESSION['acceso'] = 2;
-                        header("Location: index.php?controlador=Registro&accion=VistaRegistro");
-                    }else{
-                        $_SESSION['acceso'] = 0;
-                        header("Location: index.php?controlador=Index&accion=Login");
-                    }
+                    $_SESSION['Estado'] = 1;
+                    header("Location: index.php?controlador=Registro&accion=VistaRegistro");
                 }
                 else{
+                    $_SESSION['Estado'] = 0;
                     header("Location: index.php?controlador=Index&accion=Login");
                 }
             }
             else{
+                $_SESSION['Estado'] = 0;
                 header("Location: index.php?controlador=Index&accion=Login");
             }
         //index.php?controlador=Admin&accion=Login

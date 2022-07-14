@@ -1,3 +1,12 @@
+<?php 
+  session_start();
+  $estado = $_SESSION['Estado'];
+
+  if($estado != 1){
+    echo 'No eres bienvenido';
+    header("Location: index.php?controlador=Index&accion=Login");
+  }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,7 +30,7 @@
         </ul>
     
         <div class="col-md-3 text-end">
-            <a href="./Salir.php">
+            <a href="index.php?controlador=Index&accion=Salir">
                 <button type="button" class="btn btn-outline-primary me-2">Cerrar Sesion</button>
             </a>
         </div>

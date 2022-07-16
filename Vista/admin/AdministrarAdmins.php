@@ -47,16 +47,14 @@
 
     </header>	
     <div class="ps-5 pe-5 pb-3 mt-4"> 
-				<h1 class="rounded py-2 px-2 fs-5 general-shadow d-flex flex-wrap gap-2">
-						Administradores
-						<button class="btn btn-primary py-0 rounded">Crear</button>
-				</h1>
         <table
         id="table"
         data-toggle="table"
         data-height="460"
 				data-show-toggle = "true"
 				data-pagination="true"
+				data-search-align="left"
+				data-buttons="buttons"
         data-search="true"
         data-url="">
         <thead>
@@ -157,6 +155,21 @@
 						//console.log('ola');
 				//}
 				
+				function buttons (){
+						return{
+								btnUsersAdd: {
+										text: 'Crear Administrador',
+										icon: 'fa-plus',
+										event: function () {
+												location.href = './?controlador=Administradores&accion=CrearAdminVista';
+										},
+										attributes: {
+											title: 'Crear nuevo administrador',
+										  style: 'background-color: #0d6efd;'
+										}
+								}
+						}
+				}	
 		</script>
   </body>
 </html>

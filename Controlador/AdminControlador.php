@@ -17,7 +17,7 @@ class AdminControlador {
 				$admin = $adminMetodos->LogIn($correo);
 
 				if($admin != null){
-						if($admin->getContrasena() == $contrasena && $admin->getCorreo() == $correo){
+						if($admin->getContrasena() == $contrasena && $admin->getCorreo() == $correo && $admin->getEstado() == 1){
 								$_SESSION['Estado'] = 1;
 								header("Location: index.php?controlador=Registro&accion=VistaRegistro");
 						}

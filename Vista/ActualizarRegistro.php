@@ -9,13 +9,13 @@
     <title>Feria Virtual</title>
   </head>
   <body>
-    <div class="container pt-5">
-        <div class="card">
+    <div class="pt-5">
+        <div class="card w-50 mx-auto">
           <div class="card-body">
             <form method="post" action="index.php?controlador=Registro&accion=ModificarRegistro">
               <div class="cbody">
-                <div class="mx-auto" style="width: 200px;">
-                  <h1 class="pt-3 txtregistro"> Modificar</h1>
+                <div>
+                  <h1 class="py-2 txtregistro fs-4">Modificar Registrado</h1>
                 </div>
                 <div class="input-group">
                     <input type="hidden" name="id" value="<?php echo $registro->getId()?>">

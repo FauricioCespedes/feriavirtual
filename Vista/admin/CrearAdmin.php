@@ -47,8 +47,42 @@
 
     </header>	
 		
-		<main>
-				
+		<main class="pt-5">
+        <div class="card w-50 mx-auto">
+          <div class="card-body">
+            <form method="post" action="index.php?controlador=Administradores&accion=CrearAdmin">
+              <div class="cbody">
+                <div>
+                  <h1 class="py-2 txtregistro fs-4">Crear Administrador</h1>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="iptNombre" class="input" value="" required>
+                  <label for="name" class="input-label">Nombre</label>
+                </div>
+                <br>
+                <div class="input-group">
+                  <input type="text" name="iptApellido" value="" class="input" required>
+                  <label for="name" class="input-label">Apellido </label>
+                </div>
+                <br>
+                <div class="input-group">
+                  <input type="email" name="iptCorreo" value="" class="input" required>
+                  <label for="name" class="input-label">Correo </label>
+                </div>
+                <br>
+                <div class="input-group">
+                  <input type="password" name="iptContrasena" value="" class="input">
+                  <label for="name" class="input-label">Contraseña</label>
+                </div>
+                <br>
+                <div class="d-flex justify-content-between">
+										<a class="btn btn-primary registro" href="./?controlador=Administradores&accion=VistaAdmin2">Volver</a>
+										<button type="submit" class="btn btn-primary registro">Crear</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 		</main>
 
 		<footer class="position-fixed bottom-0 w-100 py-3 px-5 general-shadow" style="background-color: #fff;">

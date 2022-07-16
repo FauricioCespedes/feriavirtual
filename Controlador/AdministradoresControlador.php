@@ -19,12 +19,16 @@ class AdministradoresControlador {
 				require_once "./Vista/admin/AdministrarAdmins.php";
 		}
 
+		public function CrearAdminVista(){
+				require_once './Vista/admin/CrearAdmin.php';
+		}
+
 		public function CrearAdmin(){
 				$admin = new Admin();
 				$adminMetodos = new AdminMetodos();
 
 				$nombre = $_POST['iptNombre'];
-				$contrasena = $_POST['iptCedula'];
+				$contrasena = $_POST['iptContrasena'];
 				$apellido = $_POST['iptApellido'];
 				$correo = $_POST['iptCorreo'];
 
@@ -35,10 +39,10 @@ class AdministradoresControlador {
 				$admin->setEstado(1);
 
 				if($adminMetodos->NuevoAdmin($admin)){
-						header("Location: index.php?controlador=Index&accion=Main");
+						header("Location: index.php?controlador=Administradores&accion=VistaAdmin2");
 				}
 				else
-						header("Location: index.php?controlador=Index&accion=Admin");
+						header("Location: index.php?controlador=Administradores&accion=VistaAdmin2");
 		//index.php?controlador=Admin&accion=CrearAdmin
 		}
 		public function ModificarAdmin(){
@@ -51,8 +55,6 @@ class AdministradoresControlador {
 				$apellido = $_POST['apellido'];
 				$correo = $_POST['correo'];
 				$estado = $_POST['estado'];
-
-
 
 				$admin->setId($id);
 				$admin->setContrasena($contrasena);
@@ -67,6 +69,7 @@ class AdministradoresControlador {
 						header("Location: index.php?controlador=Administradores&accion=VistaAdmin2");
 		//index.php?controlador=Admin&accion=ModificarAdmin
 		}
+
 		
 		public function ModificarAdmin2(){
 				$admin = new Admin();
@@ -95,9 +98,9 @@ class AdministradoresControlador {
 						$admin->setEstado(0);
 
 						if($adminMetodos->ModificarAdmin($admin))
-						header("Location: index.php?controlador=Admin&accion=VistaAdmin");
+						header("Location: index.php?controlador=Administradores&accion=VistaAdmin2");
 				}else {
-						header("Location: index.php?controlador=Admin&accion=VistaAdmin");
+						header("Location: index.php?controlador=Administradores&accion=VistaAdmin2");
 				}
 		//index.php?controlador=Registro&accion=EliminarRegistro
 		}

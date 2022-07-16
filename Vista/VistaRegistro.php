@@ -53,6 +53,7 @@
         data-height="460"
 				data-show-toggle = "true"
 				data-pagination="true"
+				data-search-align="left"
         data-search="true"
         data-url="">
         <thead>

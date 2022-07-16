@@ -9,8 +9,8 @@
     <title>Feria Virtual</title>
   </head>
   <body>
-    <div class="container pt-5">
-        <div class="card">
+    <div class="pt-5">
+        <div class="card w-50 mx-auto">
           <div class="card-body">
             <form method="post" action="index.php?controlador=Administradores&accion=ModificarAdmin">
               <div class="cbody">

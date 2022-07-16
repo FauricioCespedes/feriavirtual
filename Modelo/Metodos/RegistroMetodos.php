@@ -30,8 +30,8 @@
                 $est = false;
                 $conexion = new Conexion();
     
-                $sql = "INSERT INTO `registro`(`NOMBRE`,`APELLIDO`,`CORREO`, `CEDULA`,`ESTADO`)
-                VALuES('".$registro->getNombre()."',
+                $sql = "INSERT INTO `REGISTRO`(`NOMBRE`,`APELLIDO`,`CORREO`, `CEDULA`,`ESTADO`)
+                VALUES('".$registro->getNombre()."',
                       '".$registro->getApellido()."',
                       '".$registro->getCorreo()."',
                       '".$registro->getCedula()."',

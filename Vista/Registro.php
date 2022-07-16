@@ -39,11 +39,11 @@
                   <label for="name" class="input-label">Cedula </label>
                 </div>
                 <br>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-between">
                   <a class="pe-2" href="index.php?controlador=Index&accion=Main">
                     <button type="button" class="btn btn-primary registro">Volver</button>
                   </a>
-                  <button type="submit" class="btn btn-primary registro" >Registrarme</button>
+                  <button type="submit" class="btn btn-primary registro" >Aceptar</button>
                 </div>
               </div>
             </form>

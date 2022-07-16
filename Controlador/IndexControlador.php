@@ -16,6 +16,8 @@
         }
         public function Salir(){
             require_once "./Vista/Login.php";
+						session_start();
+						session_destroy();
         //index.php?controlador=Index&accion=Login
         }
     }

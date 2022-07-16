@@ -27,8 +27,21 @@
             $registro->setCorreo($correo);
             $registro->setEstado(1);
 
-            if($registroMetodos->NuevoRegistro($registro))
-                header("Location: index.php?controlador=Index&accion=Main");
+            if($registroMetodos->NuevoRegistro($registro)){
+								$texto = "Gracias por registrarte en la Feria Virtual COVAO 2022.";
+								$to = $correo;
+								$title = "Feria Virtual 2022";
+								$massage = '<img style="width: 30%; display: block; margin: 1em auto;" src="https://covao.org/wp-content/uploads/2021/07/covao-logo-1.png" alt="Logo"><br><b>'.$title.'</b><br><br>';
+								$massage .= wordwrap($texto, 70, "\r\n");
+								$cabeceras = 'From: COVAO' . "\r\n" .
+								'Reply-To: hola' . "\r\n" .
+								'X-Mailer: PHP/' . phpversion();
+								$cabeceras .= 'MIME-Version: 1.0' . "\r\n";
+								$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+								mail($to, $title, $massage, $cabeceras);
+								header("Location: index.php?controlador=Index&accion=Main");
+						}
             else
                 header("Location: index.php?controlador=Index&accion=Registro");
         //index.php?controlador=Registro&accion=CrearRegistro

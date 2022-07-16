@@ -9,14 +9,14 @@
     <title>Feria Virtual</title>
   </head>
   <body>
-    <div class="container pt-5">
-        <div class="card">
-          <div class="card-body">
+    <div class="pt-5">
+        <div class="card w-50 py-2 px-4 mx-auto">
+          <div class="">
             <form method="post" action="index.php?controlador=Admin&accion=Login">
               <div class="cbody">
                 <div class="mx-auto" style="width: 250px;">
                 <img src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid pt-4">
-                  <h1 class="pt-3 pb-2 txtregistro">Inicia Sesion</h1>
+                  <h1 class="pt-3 pb-2 txtregistro fs-2">Iniciar Sesión</h1>
                 </div>
                 <div class="input-group">
                   <input type="email" name="correo" class="input" required>

@@ -2,11 +2,17 @@
 		box-sizing: border-box;
 		font-family: 'Nunito Sans', sans-serif;
 }
+body{
+		padding-bottom: 2em;
+}
 .general-shadow{
 		box-shadow: 0px 0px 15px -4px rgba(30,30,60,0.25);
 }
 .container{
     width: 700px;
+}
+.user-header{
+		padding: 0 4%;
 }
 .input-group {
     position: relative;
@@ -93,15 +99,15 @@
 }
 
 .point-info{
-		left: 29%;
-		top: 25%;
+		left: 30%;
+		top: 26%;
 }
 .point-accounting{
-		left: 13.5%;
+		left: 14.5%;
 		top: 14%;
 }
 .point-conta{
-		left: 11.7%;
+		left: 13%;
 		top: 23%;
 }
 .point-presicion{
@@ -117,12 +123,12 @@
 		top: 71%;
 }
 .point-diseno{
-		left: 61.5%;
+		left: 60.5%;
 		top: 87%;
 }
 .point-automotriz{
 		left: 79%;
-		top: 30%;
+		top: 31%;
 }
 .point-secretariado{
 		left: 29%;
@@ -154,12 +160,30 @@
 		.map-container{
 				width: 25rem;
 		}
+		.texto-container{
+				width: 90% !important;
+		}
+		.footer-content{
+				flex-direction: column;
+				gap: 10px;
+		}
+		.footer-content > * {
+				text-align: center;
+				margin: 0 auto;
+		}
+		.admin-header img, 
+		.admin-header ul{
+				display: none;	
+		}
+		.admin-header div{
+				display: block !important;
+		}
 }
-@media screen and (max-width: 880px){
+@media screen and (max-width: 1040px){
 		.card{
 				width: 90% !important;
 		}
 		.texto-container{
-				width: 73%;
+				width: 35rem;
 		}
 }

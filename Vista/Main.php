@@ -27,16 +27,15 @@
 		<link rel="stylesheet" href="./Vista/estilos.css">
     <title>Feria Virtual</title>
   </head>
-  	<body class="mh-100-vh">
-				<header class="px-5 d-flex flex-wrap align-items-center justify-content-between general-shadow">
+  	<body class="mh-100-vh" style="padding-bottom: 5em !important">
+				<header class="user-header d-flex flex-wrap align-items-center justify-content-between general-shadow">
 					<img width="110" height="50" src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid" >
-					
 				</header>	
 				<main class="main-container py-4">
 						<div class="texto-container px-4" style="font-size: 1.2rem;">
 							<h2 class="txtregistro fs-3 mt-2 mb-3">Bienvenido a la Feria Virtual COVAO 2022</h2>
 							<p>Aquí podrá conocer más sobre todas las especialidades impartidas, ubicadas en el mapa del colegio según su ubicación real mediante los puntos blancos.</p>
-							<p>En caso de que quiera recibir más información puede registrar su correo electrónico en la parte superior derecha de la página.</p>	
+							<p>En caso de que quiera recibir más información puede registrarse en el botón de abajo.</p>	
 							<a href="index.php?controlador=Index&accion=Registro">
 								<button type="button" class="btn btn-outline-primary me-2">Registrarme</button>
 							</a>
@@ -55,32 +54,32 @@
 								<div class="point point-secretariado animate__animated animate__heartBeat animate__infinite"></div>
 						</div>
 				</main>
-				<footer class="postion-sticky bottom-0 w-100 py-3 px-5 general-shadow">
-					<div class="d-flex justify-content-between">
-						<ul class="nav gap-3" style="font-size: 1.2rem;">
-							 <li class="">
-									<a class="text-muted" href="https://www.instagram.com/covao.diurno/?hl=es-la">
-										<i class="fa-brands fa-instagram"></i>
-									</a>
-							 </li>
-							 <li class="">
-									<a class="text-muted" href="https://www.youtube.com/channel/UCLfrfTSgNqIrkKvYmNtwODg">
-										<i class="fa-brands fa-youtube"></i>
-									</a>
-							</li>
-							 <li class="">
-									<a class="text-muted" href="https://www.facebook.com/covaodiurno">
-										<i class="fa-brands fa-facebook-square"></i>
-									</a>
-							</li>
-							 <li class="">
-									<a class="text-muted" href="https://covao.org/">
-										<i class="fa-solid fa-globe"></i>
-									</a>
-							</li>
-						</ul>
-						<span class="text-muted">© 2022 Feria Virtual Covao</span>
-					</div>
+				<footer class="position-fixed bottom-0 w-100 py-3 px-5 general-shadow" style="background-color: #fff;">
+						<div class="footer-content text-muted d-flex justify-content-between">
+							<ul class="nav gap-3" style="font-size: 1.2rem;">
+								 <li class="">
+										<a class="text-muted" href="https://www.instagram.com/covao.diurno/?hl=es-la">
+											<i class="fa-brands fa-instagram"></i>
+										</a>
+								 </li>
+								 <li class="">
+										<a class="text-muted" href="https://www.youtube.com/channel/UCLfrfTSgNqIrkKvYmNtwODg">
+											<i class="fa-brands fa-youtube"></i>
+										</a>
+								</li>
+								 <li class="">
+										<a class="text-muted" href="https://www.facebook.com/covaodiurno">
+											<i class="fa-brands fa-facebook-square"></i>
+										</a>
+								</li>
+								 <li class="">
+										<a class="text-muted" href="https://covao.org/">
+											<i class="fa-solid fa-globe"></i>
+										</a>
+								</li>
+							</ul>
+							<span>© 2022 Feria Virtual COVAO</span>
+						</div>
 				</footer>
   </body>
 </html>

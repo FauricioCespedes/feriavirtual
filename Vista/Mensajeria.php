@@ -22,30 +22,32 @@ if ($estado != 1) {
 </head>
 
 <body class="mh-100-vh" style="padding-bottom: 5em !important">
-	<header class="user-header admin-header d-flex flex-wrap py-1 align-items-center justify-content-between general-shadow">
-		<img width="110" height="50" src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid">
+    <header class="user-header admin-header d-flex flex-wrap py-1 align-items-center justify-content-between general-shadow">
+        <img width="110" height="50" src="https://admision.covao.org/Grafica/image/logo.png" class="img-fluid" >
+    
+        <ul class="nav mx-auto">
+            <li><a href="./?controlador=Registro&accion=VistaRegistro" class="nav-link px-2 link-secondary">Visitantes</a></li>
+            <li><a href="./?controlador=Mensajes&accion=VistaMensajeria" class="nav-link px-2 link-secondary">Mensajes</a></li>
+            <li><a href="./?controlador=Administradores&accion=VistaAdmin2" class="nav-link px-2 link-secondary">Administradores</a></li>
+        </ul>
+    
+				<div class="dropdown d-none">
+					<i class="fa-solid fa-ellipsis-vertical ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					</i>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a href="./?controlador=Registro&accion=VistaRegistro" class="nav-link px-2 link-secondary">Visitantes</a></li>
+            <li><a href="./?controlador=Mensajes&accion=VistaMensajeria" class="nav-link px-2 link-secondary">Mensajes</a></li>
+            <li><a href="./?controlador=Administradores&accion=VistaAdmin2" class="nav-link px-2 link-secondary">Administradores</a></li>
+					</ul>
+				</div>
 
-		<ul class="nav mx-auto">
-			<li><a href="./?controlador=Registro&accion=VistaRegistro" class="nav-link px-2 link-secondary">Visitantes</a></li>
-			<li><a href="./?controlador=Mensajes&accion=VistaMensajeria" class="nav-link px-2 link-secondary">Mensajes</a></li>
-		</ul>
+        <div class="text-end">
+            <a href="index.php?controlador=Index&accion=Salir">
+                <button type="button" class="btn btn-outline-primary">Salir</button>
+            </a>
+        </div>
 
-		<div class="dropdown d-none">
-			<i class="fa-solid fa-ellipsis-vertical ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-			</i>
-			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				<li><a href="./?controlador=Registro&accion=VistaRegistro" class="nav-link px-2 link-secondary">Visitantes</a></li>
-				<li><a href="./?controlador=Mensajes&accion=VistaMensajeria" class="nav-link px-2 link-secondary">Mensajes</a></li>
-			</ul>
-		</div>
-
-		<div class="text-end">
-			<a href="index.php?controlador=Index&accion=Salir">
-				<button type="button" class="btn btn-outline-primary">Salir</button>
-			</a>
-		</div>
-
-	</header>
+    </header>	
 	<main class="">
 		<div class="texto-container w-50 mx-auto mt-3 p-3  rounded general-shadow">
 			<h1 class="fs-4 fw-bold">Mensajería por correo</h1>

@@ -2,10 +2,8 @@
     class Admin{
         private $id;
         private $nombre;
-        private $apellido1;
-        private $apellido2;
+        private $apellido;
         private $correo;
-        private $cedula;
         private $contrasena;
         private $estado;
 
@@ -25,20 +23,12 @@
             $this->nombre = $nombre;
         }
     
-        public function getApellido1(){
-            return $this->apellido1;
+        public function getApellido(){
+            return $this->apellido;
         }
     
-        public function setApellido1($apellido1){
-            $this->apellido1 = $apellido1;
-        }
-    
-        public function getApellido2(){
-            return $this->apellido2;
-        }
-    
-        public function setApellido2($apellido2){
-            $this->apellido2 = $apellido2;
+        public function setApellido($apellido1){
+            $this->apellido = $apellido1;
         }
     
         public function getCorreo(){
@@ -47,14 +37,6 @@
     
         public function setCorreo($correo){
             $this->correo = $correo;
-        }
-    
-        public function getCedula(){
-            return $this->cedula;
-        }
-    
-        public function setCedula($cedula){
-            $this->cedula = $cedula;
         }
     
         public function getContrasena(){

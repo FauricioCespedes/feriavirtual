@@ -46,7 +46,11 @@
         </div>
 
     </header>	
-    <div class="ps-5 pe-5 pb-3"> 
+    <div class="ps-5 pe-5 pb-3 mt-4"> 
+				<h1 class="rounded py-2 px-2 fs-5 general-shadow d-flex flex-wrap gap-2">
+						Administradores
+						<button class="btn btn-primary py-0 rounded">Crear</button>
+				</h1>
         <table
         id="table"
         data-toggle="table"
@@ -59,7 +63,6 @@
             <tr>
 								<th data-field="name">Nombre</th>
 								<th data-field="apellido">Apellido</th>
-								<th data-field="cedula">Cedula</th>
 								<th data-field="correo">Correo</th>
 								<th data-field="estado">Estado</th>
 								<th data-field="modificar" class="text-center">Editar</th>
@@ -67,14 +70,13 @@
         </thead>
         <tbody>
             <?php
-                if($todosRegistro!=null)
+                if($todosAdmin !=null)
                 {
-                    foreach($todosRegistro as $t){
+                    foreach($todosAdmin as $t){
                         ?>
                             <tr>
                                 <td><?php echo $t->getNombre()?></td>
                                 <td><?php echo $t->getApellido()?></td>
-                                <td><?php echo $t->getCedula()?></td>
                                 <td><?php echo $t->getCorreo()?></td>
                                 <td><?php 
                                 if($t->getEstado() == 1 ){
@@ -84,10 +86,10 @@
                                 }
                                ?></td>
                                 <td class="d-flex justify-content-evenly">
-																		<a href="index.php?controlador=Registro&accion=ModificarRegistro2&id=<?php echo $t->getId()?>">
+																		<a href="index.php?controlador=Administradores&accion=ModificarAdmin2&id=<?php echo $t->getId()?>">
 																				<i class="fa-solid fa-pen-to-square" style="color: #333; font-size: 1.3rem;"></i>
 																		</a>
-																		<a href="index.php?controlador=Registro&accion=EliminarRegistro&id=<?php echo $t->getId()?>">
+																		<a href="index.php?controlador=Administradores&accion=EliminarAdmin&id=<?php echo $t->getId()?>">
 																				<i class="fa-solid fa-trash-can" style="color: #333; font-size: 1.3rem;"></i>
 																		</a>  
                                 </td>
@@ -158,3 +160,4 @@
 		</script>
   </body>
 </html>
+

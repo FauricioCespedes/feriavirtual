@@ -46,62 +46,11 @@
         </div>
 
     </header>	
-    <div class="ps-5 pe-5 pb-3"> 
-        <table
-        id="table"
-        data-toggle="table"
-        data-height="460"
-				data-show-toggle = "true"
-				data-pagination="true"
-        data-search="true"
-        data-url="">
-        <thead>
-            <tr>
-								<th data-field="name">Nombre</th>
-								<th data-field="apellido">Apellido</th>
-								<th data-field="cedula">Cedula</th>
-								<th data-field="correo">Correo</th>
-								<th data-field="estado">Estado</th>
-								<th data-field="modificar" class="text-center">Editar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                if($todosRegistro!=null)
-                {
-                    foreach($todosRegistro as $t){
-                        ?>
-                            <tr>
-                                <td><?php echo $t->getNombre()?></td>
-                                <td><?php echo $t->getApellido()?></td>
-                                <td><?php echo $t->getCedula()?></td>
-                                <td><?php echo $t->getCorreo()?></td>
-                                <td><?php 
-                                if($t->getEstado() == 1 ){
-                                    echo "Activo";
-                                }else{
-                                    echo "Inactivo";
-                                }
-                               ?></td>
-                                <td class="d-flex justify-content-evenly">
-																		<a href="index.php?controlador=Registro&accion=ModificarRegistro2&id=<?php echo $t->getId()?>">
-																				<i class="fa-solid fa-pen-to-square" style="color: #333; font-size: 1.3rem;"></i>
-																		</a>
-																		<a href="index.php?controlador=Registro&accion=EliminarRegistro&id=<?php echo $t->getId()?>">
-																				<i class="fa-solid fa-trash-can" style="color: #333; font-size: 1.3rem;"></i>
-																		</a>  
-                                </td>
-                            </tr>
-                        <?php
-                    }
+		
+		<main>
+				
+		</main>
 
-                }
-            ?>
-            
-        </tbody>
-        </table>
-    </div>
-    
 		<footer class="position-fixed bottom-0 w-100 py-3 px-5 general-shadow" style="background-color: #fff;">
 				<div class="footer-content text-muted d-flex justify-content-between">
 					<ul class="nav gap-3" style="font-size: 1.2rem;">
@@ -158,3 +107,4 @@
 		</script>
   </body>
 </html>
+
